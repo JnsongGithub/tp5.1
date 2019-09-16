@@ -27,5 +27,10 @@ class Socket extends Server
         $server->send($fd, 'Swoole: '.$data);
     }
 
+    public function onMessage()
+    {
+
+    }
+
 
 }

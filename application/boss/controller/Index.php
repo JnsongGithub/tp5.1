@@ -1,13 +1,16 @@
 <?php
 namespace app\boss\controller;
 
+use app\common\Redis;
 use think\Controller;
 
 class Index extends Controller
 {
     public function index()
     {
-        return 'boss index';
+        $redis = new Redis();
+        $resu = $redis->get('name');
+        return $resu;
     }
 
 
